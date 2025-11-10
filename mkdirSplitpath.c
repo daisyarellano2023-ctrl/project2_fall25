@@ -36,7 +36,8 @@ void mkdir(char pathName[]){
         if (strcmp(child->name, baseName) == 0) {
             printf("MKDIR ERROR: directory %s already exists\n", pathName);
             return;
-}
+} 
+
     }
     
 
