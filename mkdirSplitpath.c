@@ -33,11 +33,12 @@ void mkdir(char pathName[]){
 
     // checking if we already have it
     for (struct NODE *child = Dirparent->childPtr; child; child = child->siblingPtr) {
-        if (strcmp(child->name, baseName) == 0 && child->fileType == 'D') {
-            printf("MKDIR ERROR: directory %s already exists\n", baseName);
+        if (strcmp(child->name, baseName) == 0) {
+            printf("MKDIR ERROR: directory %s already exists\n", pathName);
             return;
-        }
+}
     }
+    
 
     if (!Dir) {
         printf("MKDIR ERROR: memory allocation failed\n");
